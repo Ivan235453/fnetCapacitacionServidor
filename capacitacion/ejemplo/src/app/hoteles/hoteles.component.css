@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: Poppins;
+
+}
+
+#hotelOptions{
+    overflow-y: scroll;
+    height: 50vw;
+    text-align: center;
+}
+
+
+.hotelCard img{
+    /*height: 20vw;
+    width: 20vw;*/
+    border-radius: 25px;
+}
+.fa-star{
+    color: orange;
+}
+mark{
+    border-radius: 10px;
+}

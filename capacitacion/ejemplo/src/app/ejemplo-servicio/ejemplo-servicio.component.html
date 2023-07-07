@@ -1,0 +1,29 @@
+
+<input [(ngModel)]="ejemplo" type="text" name="p" id="p" namespace="Ingrese ID" class="form">
+<button class="btn btn-primary" (click)="getActor()">Submit</button>
+<br><br><br>
+<div>
+    <p>ingresar actor</p>
+<input [(ngModel)]="actorObject.name" type="text" name="name" id="name" namespace="Ingrese nombre" class="form">
+<input [(ngModel)]="actorObject.lastname " type="text" name="lastname" id="lastname" namespace="Ingrese apellido" class="form">
+
+<button class="btn btn-primary" (click)="insertActor()">Insertar actor</button>
+</div>
+
+
+<!--<p> {{actor[0]|json}}</p>
+<p>Nombre: {{actor[0].first_name}}</p>
+<p>Apellido: {{actor[0].last_name}}</p> -->
+
+<button class="btn btn-primary" (click)="getAllActors()">Mostrar todos los actores</button>
+
+
+<table class="table table-striped" >
+    <tbody class="">
+        <tr *ngFor="let i of actores">
+            <td>{{i.actor_id}}</td>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+        </tr>
+    </tbody>
+</table>

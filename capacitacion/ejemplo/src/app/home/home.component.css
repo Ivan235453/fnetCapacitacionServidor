@@ -1,0 +1,9 @@
+.bordes{
+    border: 1px solid black;
+}
+
+.animacion:hover{
+    animation: ease-in;
+    transition: .5s all;
+    font-size: 50px;
+}
