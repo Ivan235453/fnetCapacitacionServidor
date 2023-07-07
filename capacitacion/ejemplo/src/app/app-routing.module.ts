@@ -8,10 +8,9 @@ import { EjemploServicioComponent } from './ejemplo-servicio/ejemplo-servicio.co
 import { GuardianGuard } from './guardian.guard';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent,canActivate:[GuardianGuard]},
-  {path:'home',component:HomeComponent},
+  {path:'home',component:HomeComponent,canActivate:[GuardianGuard]},
   {path:'pagina',component:PaginaComponent},
-  {path:'nav',component:NavComponent},
+  {path:'',component:HotelesComponent},
   {path:'hoteles',component:HotelesComponent},
   {path:'ejemplo',component:EjemploServicioComponent}
 ];

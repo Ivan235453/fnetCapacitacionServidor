@@ -7,8 +7,12 @@ body{
 
 #hotelOptions{
     overflow-y: scroll;
-    height: 50vw;
+    height: 20vw;
     text-align: center;
+}
+
+.hotelButtons{
+    border-left: 1px solid rgba(0, 0, 0, 0.352);
 }
 
 
@@ -22,4 +26,11 @@ body{
 }
 mark{
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    #hotelOptions{
+       
+        height: 75vw;
+    }
 }
