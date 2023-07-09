@@ -5,22 +5,18 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class GuardianGuard implements CanActivate {
-
+export class LoggedGuardGuard implements CanActivate {
   constructor(private router:Router){}
-
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(sessionStorage.getItem('bandera')=='true')
+     if(sessionStorage.getItem('bandera')!='true')
       {
         return true;
       }else
-      this.router.navigate(['/hoteles']);
+      this.router.navigate(['/panel']);
         return false;
 
   }
-
-
   
 }

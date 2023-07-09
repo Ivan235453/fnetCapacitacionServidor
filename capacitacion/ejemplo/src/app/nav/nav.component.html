@@ -1,18 +1,12 @@
 <nav class="container-fluid">
     <div class="row">
-<h4 id="hoteles" class="ml-5 col-sm">Hoteles.com</h4>
-<button class="btn btn-dark col-sm " routerLink="home">Home</button>
-<button class="btn btn-dark col-sm" routerLink="pagina">Pagina</button>
-<button class="btn btn-dark col-sm" routerLink="hoteles">Hoteles</button>
-<button class="btn btn-dark col-sm" routerLink="ejemplo">Ejemplo</button>
+        <h4 id="hoteles" class="ml-5 col-sm">Hoteles.com</h4>
+        <button class="btn btn-dark col-sm " routerLink="home">Home</button>
+        <button class="btn btn-dark col-sm" routerLink="pagina">Pagina</button>
+        <button class="btn btn-dark col-sm" routerLink="hoteles">Hoteles</button>
+        <button class="btn btn-dark col-sm" routerLink="ejemplo">Ejemplo</button>
 
-    <button *ngIf="!isLogged()" class="btn btn-primary col-sm" routerLink="login">Iniciar Sesión</button>
-
-
-    <button *ngIf="isLogged()" class="btn btn-primary col-sm" routerLink="panel">Hola {{whoI()}}</button>
-
-<!--  <ng-container *ngif="sessionStorage.getItem('bandera')=='true'"><button class="btn btn-primary col-sm" routerLink="login">Iniciar Sesión</button></ng-container> -->
-
-
+        <button *ngIf="!isLogged()" class="btn btn-primary col-sm" routerLink="login">Iniciar Sesión</button>
+        <button *ngIf="isLogged()" class="btn btn-primary col-sm" routerLink="panel">Hola {{whoI()}}</button>
     </div>
 </nav>

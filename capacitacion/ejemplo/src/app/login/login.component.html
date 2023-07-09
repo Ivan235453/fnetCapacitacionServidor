@@ -18,10 +18,11 @@
       
         <!--password.valid || password.pristine   [ngClass]="password.valid || password.pristine?'noshow':'show'"-->
         
-        <button class="btn btn-primary mt-1"  [disabled]="formLogin.invalid">Acceder</button>
+        <button class="btn btn-primary mt-1" [disabled]="formLogin.invalid">Acceder</button>
         </form>
         <p>¿No tiene Cuenta?</p>
-        <p class=" btn btn-link">Registrarse</p>
+        <button class="btn btn-link" routerLink="../register">Registrarse</button>
+       
       
 
     </div>

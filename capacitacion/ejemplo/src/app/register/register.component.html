@@ -1,0 +1,63 @@
+
+<div class="container mt-5 ">
+    <div class="card pb-5 pt-4" id="registerCard">
+        <img src="https://cdn-icons-png.flaticon.com/512/13/13732.png" alt="ola" class="img-fluid"> 
+
+
+
+        <h2>Crear Nueva Cuenta</h2>
+        <form (ngSubmit)="hola()" #formRegister="ngForm" class="row form-control">
+
+            <div class="row">
+                <div class="col-xl">
+                <label >Nombre: </label> 
+                
+                <input type="text" class="form form-control" name="firstName" [(ngModel)]="user.firstName" placeholder="Ingrese su Nombre" required #firstName="ngModel" >
+                <div class="alert alert-danger mt-1  p-1 m-0 container" [hidden]="firstName.valid || firstName.pristine"> <i class="fa fa-exclamation-triangle"></i>Nombre invalido</div>
+                </div>
+
+                <div class="col-xl">
+                <label class >Apellido: </label> 
+                
+                <input type="text" class="form form-control" name="lastName" [(ngModel)]="user.lastName" placeholder="Ingrese su Apellido" required #lastName="ngModel" >
+                <div class="alert alert-danger mt-1  p-1 m-0 container" [hidden]="lastName.valid || lastName.pristine"> <i class="fa fa-exclamation-triangle"></i>Nombre invalido</div>
+                </div>
+            </div>
+            <div>
+            <label >Correo Electronico</label>
+        
+            <input type="email" name="email" id="" class="form form-control" [(ngModel)]="user.email" placeholder="Ingrese Contraseña" required email #email="ngModel">
+            <div class="alert alert-danger mt-1 p-1 m-0 container" [hidden]="email.valid || email.pristine" > <i class="fa fa-exclamation-triangle"></i>Correo invalido</div>    
+                
+            <label>Usuario</label> 
+            
+                <input type="text" class="form  form-control" name="username" [(ngModel)]="user.username" placeholder="Nombre de Usuario" required #username="ngModel" >
+                <div class="alert alert-danger mt-1  p-1 m-0 container" [hidden]="username.valid || username.pristine"> <i class="fa fa-exclamation-triangle"></i>Nombre de usuario invalido</div>
+        
+         </div>
+        <div class="row">
+
+            <div class="col-xl">
+                <label >Contraseña</label>
+            
+                <input type="password" name="password" id="" class="form form-control" [(ngModel)]="user.password" placeholder="Ingrese Contraseña" required #password="ngModel">
+                <div class="alert alert-danger mt-1 p-1 m-0 container" [hidden]="password.valid || password.pristine" > <i class="fa fa-exclamation-triangle"></i>Contraseña invalida</div>
+             </div>
+
+            <div class="col-xl">
+                <label >Confirmar Contraseña</label>
+            
+                <input type="password" name="passwordConfirm" id="" class="form form-control" [(ngModel)]="passwd" placeholder="Confirme Contraseña" required #passwordConfirm="ngModel">
+                <div class="alert alert-danger mt-1 p-1 m-0 container" [hidden]="passwordConfirm.valid || passwordConfirm.pristine" > <i class="fa fa-exclamation-triangle"></i>Contraseña invalida</div>
+                <div class="alert alert-danger mt-1 p-1 m-0 container" [hidden]="passwordConfirm.value==password.value || passwordConfirm.pristine"  > <i class="fa fa-exclamation-triangle"></i>Las contraseñas no concuerdan</div>   
+             </div>
+         </div>
+        
+        <button class="btn btn-primary mt-3" [disabled]="formRegister.invalid||passwordConfirm.value!=password.value">Registrarse</button>
+        </form>
+    
+       
+      
+
+    </div>
+</div>

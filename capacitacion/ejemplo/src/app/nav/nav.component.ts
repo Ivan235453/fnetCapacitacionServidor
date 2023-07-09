@@ -5,11 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
+
+
+
 export class NavComponent {
 
 
 isLogged(){
-  console.log(sessionStorage.getItem('bandera'));
   if(sessionStorage.getItem('bandera')=='true')
     return true;
     else return false;

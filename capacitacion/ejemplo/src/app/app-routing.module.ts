@@ -7,6 +7,8 @@ import { EjemploServicioComponent } from './ejemplo-servicio/ejemplo-servicio.co
 import { GuardianGuard } from './guardian.guard';
 import { LoginComponent } from './login/login.component';
 import { PanelComponent } from './panel/panel.component';
+import { RegisterComponent } from './register/register.component';
+import { LoggedGuardGuard } from './logged-guard.guard';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent,canActivate:[GuardianGuard]},
@@ -14,8 +16,12 @@ const routes: Routes = [
   {path:'',component:HotelesComponent},
   {path:'hoteles',component:HotelesComponent},
   {path:'ejemplo',component:EjemploServicioComponent},
-  {path:'login',component:LoginComponent},
-  {path:'panel',component:PanelComponent,canActivate:[GuardianGuard]}
+  {path:'login',component:LoginComponent,canActivate:[LoggedGuardGuard]},
+  {path:'register',component:RegisterComponent,canActivate:[LoggedGuardGuard]},
+  {path:'panel',component:PanelComponent,canActivate:[GuardianGuard]},
+  
+  
+
 ];
 
 @NgModule({

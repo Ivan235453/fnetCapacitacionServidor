@@ -1,0 +1,35 @@
+.container{
+    justify-content: center;
+   
+}
+
+#registerCard{
+    height: 70%;
+    width: 90vw;
+    padding: 0 25% 0 25%;
+}
+
+/*form{
+    display: flex;
+    flex-direction: column;
+}*/
+
+.alert-danger{
+    width: min-content;
+    min-width: 100%;
+    font-size: .9em;
+}
+
+.show{
+    visibility: visible;
+}
+.noshow{
+    visibility: hidden;
+}
+
+#registerCard img{
+   
+    align-self: center;
+  width: 5em;
+
+}
