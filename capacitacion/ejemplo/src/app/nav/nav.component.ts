@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+
+isLogged(){
+  console.log(sessionStorage.getItem('bandera'));
+  if(sessionStorage.getItem('bandera')=='true')
+    return true;
+    else return false;
+}
+
+whoI(){
+  return sessionStorage.getItem('username')
+}
 }

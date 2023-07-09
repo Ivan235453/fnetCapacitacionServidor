@@ -16,6 +16,8 @@ export class EjemploServicioComponent {
     name:'',
     lastname:'',
   }
+
+
   constructor(private service:ServicioService){}
 
 
@@ -38,6 +40,7 @@ export class EjemploServicioComponent {
     getAllActors(){
       this.ejemplo=this.service.funcionAllActors(this.ejemplo).subscribe((res:any)=>{
         if(res["success"])
+        console.log(res['data'][0])
         this.actores=res['data'][0];
        });
     }

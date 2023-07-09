@@ -9,7 +9,9 @@ import { NavComponent } from './nav/nav.component';
 import { HotelesComponent } from './hoteles/hoteles.component';
 import { EjemploServicioComponent } from './ejemplo-servicio/ejemplo-servicio.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,16 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     HotelesComponent,
     EjemploServicioComponent,
+    LoginComponent,
+    PanelComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

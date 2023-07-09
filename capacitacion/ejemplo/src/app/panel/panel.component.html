@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="card p-3" id="panelCard">
+
+        
+        <h2 class="row">Bienvenido {{usernew.firstName}}</h2>
+        <div class="row">
+            <label class="col-sm m-1">Usuario: </label>
+            <input class="form-control col-sm m-1" readonly value={{usernew.username}}>
+        </div>
+        <div class="row">
+            <label class="col-sm m-1">Nombre: </label>
+            <input class="form-control col-sm m-1" readonly value={{usernew.firstName}}>
+        </div>
+        <div class="row">
+            <label class="col-sm m-1">Apellido: </label>
+            <input class="form-control col-sm m-1" readonly value={{usernew.lastName}}>
+
+        </div>
+
+        <button class="btn btn-danger mt-2" (click)="closeSession()"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar Sesión</button>
+    </div>
+</div>
+

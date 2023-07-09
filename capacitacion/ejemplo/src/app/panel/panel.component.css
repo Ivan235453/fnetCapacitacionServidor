@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#panelCard{
+    height: 70%;
+    width: 75vw;
+    align-items: center;
+}

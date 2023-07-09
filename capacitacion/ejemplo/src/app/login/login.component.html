@@ -1,0 +1,28 @@
+
+<div class="container mt-5">
+    <div class="card p-3" id="loginCard">
+        <img src="https://publicdomainvectors.org/tn_img/abstract-user-flat-4.webp" alt="ola" class="img-fluid"> 
+        <h2>Iniciar Sesion</h2>
+        <form (ngSubmit)="getUser()" #formLogin="ngForm">
+            
+        <label class>Usuario</label> 
+         
+            <input type="text" class="form" name="username" [(ngModel)]="user.username" placeholder="Nombre de usuario" required #username="ngModel" >
+            <div class="alert alert-danger mt-1  p-1 m-0 container" [hidden]="username.valid || username.pristine"> <i class="fa fa-exclamation-triangle"></i>Nombre invalido</div>
+      
+        
+        <label >Contraseña</label>
+       
+        <input type="password" name="password" id="" class="form mw-100" [(ngModel)]="user.password" placeholder="Ingrese Contraseña" required #password="ngModel">
+        <div class="alert alert-danger mt-1 p-1 m-0 container" [hidden]="password.valid || password.pristine" > <i class="fa fa-exclamation-triangle"></i>Contraseña invalida</div>
+      
+        <!--password.valid || password.pristine   [ngClass]="password.valid || password.pristine?'noshow':'show'"-->
+        
+        <button class="btn btn-primary mt-1"  [disabled]="formLogin.invalid">Acceder</button>
+        </form>
+        <p>¿No tiene Cuenta?</p>
+        <p class=" btn btn-link">Registrarse</p>
+      
+
+    </div>
+</div>

@@ -26,4 +26,18 @@ export class ServicioService {
   funcionInsertar(body:any){
     return this.http.post(`http://127.0.0.1:8000/`,body)
   }
+
+  checkUser(user:any){
+      //console.log(user.username+"  "+user.password);
+    return this.http.post(`http://127.0.0.1:8000/checkU`,user);
+
+  }
+
+  getUserData(username:any){
+    //console.log("asd"+ username);
+  return this.http.post(`http://127.0.0.1:8000/getUD`,username);
+
+}
+
+
 }
