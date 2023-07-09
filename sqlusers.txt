@@ -1,0 +1,26 @@
+USE [sakila]
+GO
+/****** Object:  Table [dbo].[users]    Script Date: 09/07/2023 05:24:29 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[users](
+	[user_ID] [int] IDENTITY(1,1) NOT NULL,
+	[lastName] [varchar](255) NOT NULL,
+	[firstName] [varchar](255) NULL,
+	[username] [varchar](255) NULL,
+	[password] [varchar](255) NULL,
+	[email] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[user_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[users] ON 
+GO
+INSERT [dbo].[users] ([user_ID], [lastName], [firstName], [username], [password], [email]) VALUES (1, N'Perez', N'Juan', N'juan123', N'contra', N'correo@mail.com')
+GO
+SET IDENTITY_INSERT [dbo].[users] OFF
+GO
