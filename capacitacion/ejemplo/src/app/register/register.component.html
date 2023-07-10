@@ -6,7 +6,7 @@
 
 
         <h2>Crear Nueva Cuenta</h2>
-        <form (ngSubmit)="hola()" #formRegister="ngForm" class="row form-control">
+        <form (ngSubmit)="register()" #formRegister="ngForm" class="row form-control">
 
             <div class="row">
                 <div class="col-xl">
@@ -53,7 +53,7 @@
              </div>
          </div>
         
-        <button class="btn btn-primary mt-3" [disabled]="formRegister.invalid||passwordConfirm.value!=password.value">Registrarse</button>
+        <button class="btn btn-primary mt-3" type="submit" [disabled]="formRegister.invalid||passwordConfirm.value!=password.value">Registrarse</button>
         </form>
     
        

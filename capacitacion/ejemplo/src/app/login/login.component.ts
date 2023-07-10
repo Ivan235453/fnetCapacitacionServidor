@@ -1,6 +1,10 @@
 import { Component} from '@angular/core';
 import { ServicioService } from '../servicio.service';
 import {Router} from '@angular/router';
+import Swal from 'sweetalert2';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,9 +12,12 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 
+
+
 export class LoginComponent{
 
-  
+
+ 
 
 
   constructor(private service:ServicioService, private router:Router){}
@@ -24,13 +31,24 @@ export class LoginComponent{
   
   getUser(){
     this.service.checkUser(this.user).subscribe((res:any)=>{
-      if(res['data']!=""){
+      //res['success']==true
+      if(res['success']==true){
+        alert("bienvenido")
         console.log(res['data']['0']);
         sessionStorage.setItem("bandera","true");
         sessionStorage.setItem("username",this.user.username);
         this.router.navigate(['/panel'])
       }else{
-      alert("error");
+        console.log(res['data']);
+
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: res['message'],
+          footer: 'Verifique los datos ingresados'
+        })
+      
       }
      });
   }

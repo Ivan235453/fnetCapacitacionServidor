@@ -38,6 +38,9 @@ export class ServicioService {
   return this.http.post(`http://127.0.0.1:8000/getUD`,username);
 
 }
+  insertUser(newUser:any){
+    return this.http.post(`http://127.0.0.1:8000/newUser`,newUser);
+  }
 
 
 }
